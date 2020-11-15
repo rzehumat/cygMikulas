@@ -1,0 +1,118 @@
+% \documentclass[a4paper,11pt]{combine}
+\documentclass[11pt]{combine}
+
+
+%\input{packages.tex}
+%\input{config.tex}
+%\input{commands.tex}
+%\setcounter{tocdepth}{0} % Show sections
+
+\title{MNAM dopici}
+\author{Krtecek}
+\date{29 February, 2020}
+
+\begin{document}
+\pagestyle{combine}        % use the combine page style
+\maketitle                 % main title
+\tableofcontents           % main ToC
+\clearpage
+
+% \thispagestyle{empty}
+% %\begin{titlepage}
+% 	\begin{center}
+% 		\vfill
+% 	\fpic{sponzori/fjfi.pdf}{sponzori/symbol_cvut_konturova_verze_cb.pdf}{sponzori/fjfi.pdf}{sponzori/symbol_cvut_konturova_verze_cb.pdf}
+% 		\vspace{5mm}
+% 		\footnotesize{sponzor1}\\
+% 		\vspace{3mm}
+% 	\footnotesize{sponzor2}\\
+% 		\vspace{3mm}
+% 	\footnotesize{sponzor3}\\
+% 		\vspace{3mm}
+% 	\footnotesize{sponzor4}\\
+% 		\vspace{8mm}
+% 	\Huge{\tb{Nadpis}}
+% 		\vfill
+% 		\large{\ti{Mikuláš}}\\
+% 		\vspace{20mm}
+% 		\large{\bf{Sborník}}
+% 	\end{center}
+% % \end{titlepage}
+% 
+% \newpage
+% \thispagestyle{empty}
+% isbn strana
+% 
+% \newpage
+% \thispagestyle{empty}
+% sponzori strana
+% 
+% \newpage
+% \thispagestyle{empty}
+% misto, prispeni, podekovani strana
+% 
+% %\newpage  % SEM NESAHEJTE!
+% %\parskip=0pt
+% %\begin{small}
+% \tableofcontents % SEM NESAHEJTE!
+% % \end{small}
+% % \parskip=7pt
+% % \newpage % SEM NESAHEJTE!
+% \clearpage
+% 
+% \newpage
+% \thispagestyle{empty}
+% program
+% 
+% \newpage
+% \thispagestyle{empty}
+% oceneni
+% 
+% \newpage
+% \thispagestyle{empty}
+% vytisk info
+\section{Editor’s introduction} \label{intro}  % into main ToC (section 1)
+
+In the article by A.~N.~Author on page~%\pageref{art1} ...
+
+\begin{papers}                  % start of individual articles/papers
+	\coltoctitle{An article}        % first article title into main ToC
+	\coltocauthor{A.~N.~Author}     % first authors into main ToC
+	\label{art1}
+	\import{./clanky/cimrman/clanek}                   % first article, may have own ToC,% bibliography, etc.
+
+% 	\coltoctitle{Another article}
+% 	\coltocauthor{A.~N.~Other}
+% 	\label{art2}
+% 	\import{art2}
+
+\end{papers}                    % end of individual articles/papers
+\clearpage
+
+\section{Acknowledgements}      % into main ToC (section 2)
+Among the many ...
+
+% \stdindent
+% \stdskip
+
+%\setcounter{secnumdepth}{-1}
+%
+%\include{./clanky/cimrman/clanek}
+%\include{./clanky/krtecek/clanek}
+%\include{./clanky/thor/clanek}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% \thispagestyle{empty}
+% zaverecna strana
+
+%%%%%%%%%%%% SEZNAM POUŽITÝCH ZDROJŮ (LITERATURA) %%%%%%%%%%%%
+% \printbibliography[heading=bibintoc]
+
+%%%%%%%%%%%% PŘÍLOHY PRÁCE %%%%%%%%%%%%
+% \newpage % SEM NESAHEJTE!
+% \appendix % SEM NESAHEJTE!
+% 
+% \include{addons/appendix}
+
+\end{document} % SEM NESAHEJTE! Konec.

@@ -4,10 +4,10 @@
 % @description Class for CYG conference paper.
 %
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cygclanek}
+\ProvidesClass{cygsbornik}
  
 % inherit from article class
-\LoadClass[a4paper,11pt]{article}
+\LoadClass[a4paper,11pt]{combine}
 % 
 % packages
 %

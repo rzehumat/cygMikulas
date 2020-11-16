@@ -1,27 +1,47 @@
 %
-% @author Michal Koutný <michal@fykos.cz>
+% @author Matěj Rzehulka  <matej.rzehulka@fykos.cz>
 %
-% @description Provides base class (margins + headings)
+% @description Class for CYG conference paper.
 %
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cygclanek}
  
 % inherit from article class
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{extarticle}}
-\ProcessOptions
-\LoadClass[a4paper,11pt]{extarticle}
+\LoadClass[a4paper,11pt]{article}
 % 
 % 
 % packages
 %
+\RequirePackage[slovak,czech]{babel}
+\RequirePackage[left=1.5cm,
+		right=1.5cm,
+		top=2cm,
+		bottom=2cm
+		]{geometry}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{lmodern}
+\RequirePackage{fancyhdr}
+\RequirePackage{authblk}
+
+% commands - redefinitions
+\renewcommand{\maketitle}{%
+	{\center \huge \textbf{\@title}} \\
+	{\center \large \@author}
+
+}
+
+% options -- styling etc
+\pagestyle{fancy}
+\fancyfoot[C]{\thepage}
+\fancyhead[C]{Mikulas TODO}
+\fancyhead[R]{}
+\fancyhead[L]{}
+
+
+
 % \documentclass[11pt, a4paper]{article}
 % \usepackage[slovak,czech]{babel}
-% \usepackage[margin=1.5cm]{geometry}
-% \usepackage[T1]{fontenc}
-% \usepackage[utf8]{inputenc}
-% \usepackage{lmodern}
-% \usepackage[autostyle,czech=guillemets]{csquotes}
-
 % \RequirePackage{optional} % ought be first
 % \RequirePackage{amssymb}
 % \RequirePackage[no-math]{fontspec} % no-math is because of mathrm(Omega)
@@ -149,3 +169,5 @@
 % 
 % 
 % \@ifundefined{UseOption}{\def\UseOption{web}}{} % when no option set, we use web settings
+% \DeclareOption*{\PassOptionsToClass{\CurrentOption}{extarticle}}
+% \ProcessOptions

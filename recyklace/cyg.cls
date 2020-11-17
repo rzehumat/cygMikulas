@@ -4,108 +4,41 @@
 % @description Class for CYG conference paper.
 %
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cygclanek}
+\ProvidesClass{cyg}
  
 % inherit from article class
-\LoadClass[a4paper,11pt]{article}
+\LoadClass[11pt]{combine}
 % 
 % packages
 %
-\usepackage[slovak,czech]{babel}
-\usepackage[left=1.5cm,
+\RequirePackage[slovak,czech]{babel}
+\RequirePackage[left=1.5cm,
 		right=1.5cm,
 		top=2cm,
 		bottom=2cm
 		]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
-\usepackage{fancyhdr}
-\usepackage{authblk}
-\usepackage{etoolbox}
-% \usepackage[style=iso-numeric, backend=biber, language=czech]{biblatex}
-\usepackage[style=iso-numeric, backend=biber, language=czech]{biblatex}
-\usepackage{csquotes}
-\usepackage{amsthm}
-\usepackage[hidelinks,unicode]{hyperref}
-\usepackage{paralist}
-\usepackage{marvosym}
-\usepackage{float}
-\usepackage{graphicx}
-\usepackage[font=small,labelfont=bf]{caption}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{lmodern}
+\RequirePackage{fancyhdr}
+\RequirePackage{authblk}
+\RequirePackage{etoolbox}
 
 % options -- styling etc
 \pagestyle{fancy}
 \fancyfoot[C]{\thepage}
-\fancyhead[C]{}
-\fancyhead[L]{\@title}
-\fancyhead[R]{Mikulášské setkání 2020}
+\fancyhead[C]{Mikulas TODO}
+\fancyhead[R]{}
+\fancyhead[L]{}
 
 % commands -- redefinitions
 \renewcommand{\maketitle}{%
 	\begin{center}
-		\vspace{4mm}
-	{\Huge \textbf{\@title}} \\
-	\vspace{7mm}
-	{\Large \@author} \\
-	\vspace{5mm}
-	\begin{compactenum}
-		\centering
-		\begin{scriptsize}
-		\item \label{vut} VUT v Brně, Fakulta elektrotechniky a komunikačních technologií, Ústav elektroenergetiky, Technická 3058/10, 616 00 Brno, Česká republika
-		\item \label{ujv} UJV
-		\item \label{ujf} UJF
-		\end{scriptsize}
-	\end{compactenum}
+	{\huge \textbf{\@title}} \\
+	{\large \@author}
 	\end{center}
 }
 
-% commands -- new
-\newcommand{\footnotei}[2]{%
-\mbox{%
-\setbox0\hbox{#1}%
-\copy0%
-\hspace{-\wd0}}%
-\footnote{#2}%
-}
-
-\newcommand{\refei}[2]{%
-\mbox{%
-\setbox0\hbox{#1}%
-\copy0%
-\hspace{-\wd0}}%
-$^{\ref{#2}}$%
-}
-
-\newcommand{\pic}[3]{%
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{./img/#1}
-\caption{#2}
-\label{#3}
-\end{figure}
-}
-
-\newcommand{\at}{\MVAt}
-
-
-\newcommand{\dpic}[6]{%
-\begin{figure}[H]
-    \centering
-    \begin{minipage}{0.49\textwidth}
-        \centering
-        \includegraphics[width=0.98\textwidth]{img/#1} % first figure itself
-        \caption{#2}
-        \label{#3}
-    \end{minipage}\hfill
-    \begin{minipage}{0.49\textwidth}
-        \centering
-        \includegraphics[width=0.98\textwidth]{img/#4} % second figure itself
-        \caption{#5}
-        \label{#6}
-    \end{minipage}
-\end{figure}
-}
 % \RequirePackage{titling}
 % \documentclass[11pt, a4paper]{article}
 % \usepackage[slovak,czech]{babel}

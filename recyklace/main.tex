@@ -1,13 +1,34 @@
 % \documentclass[a4paper,11pt]{combine}
-% \documentclass[11pt]{combine}
-\documentclass{cygsbornik}
+\documentclass[11pt]{combine}
+% \documentclass{cyg}
 
+% \input{cyg.tex}
 
 %\input{packages.tex}
 %\input{config.tex}
 %\input{commands.tex}
 %\setcounter{tocdepth}{0} % Show sections
-% \usepackage[czech]{babel}
+
+\usepackage[slovak,czech]{babel}
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+% \usepackage{fancyhdr}
+\usepackage{authblk}
+
+\usepackage[style=iso-numeric, backend=biber, language=czech]{biblatex}
+\usepackage{csquotes}
+\usepackage{amsthm}
+% \usepackage{etoolbox}
+% 
+% options -- styling etc
+% \pagestyle{fancy}
+% \fancyfoot[C]{\thepage}
+% \fancyhead[C]{Mikulas TODO}
+% \fancyhead[R]{}
+% \fancyhead[L]{}
+
 \title{MNAM dopici}
 \author{Krtecek}
 \date{29 February, 2020}

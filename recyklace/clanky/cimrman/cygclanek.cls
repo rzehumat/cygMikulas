@@ -11,7 +11,19 @@
 % 
 % packages
 %
-\usepackage[slovak,czech]{babel}
+
+% \newcommand{\cz}{
+% 	\usepackage[czech]{babel}
+% }
+% 
+% \newcommand{\sk}{
+% 	\usepackage[slovak]{babel}
+% }
+
+\newcommand{\jazyk}[1]{
+	\usepackage[#1]{babel}
+}
+
 \usepackage[left=1.5cm,
 		right=1.5cm,
 		top=2cm,
@@ -23,7 +35,6 @@
 \usepackage{fancyhdr}
 \usepackage{authblk}
 \usepackage{etoolbox}
-% \usepackage[style=iso-numeric, backend=biber, language=czech]{biblatex}
 \usepackage[style=iso-numeric, backend=biber, language=czech]{biblatex}
 \usepackage{csquotes}
 \usepackage{amsthm}
@@ -33,6 +44,7 @@
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage[font=small,labelfont=bf]{caption}
+% \usepackage{forloop}
 
 % options -- styling etc
 \pagestyle{fancy}
@@ -48,13 +60,25 @@
 	{\Huge \textbf{\@title}} \\
 	\vspace{7mm}
 	{\Large \@author} \\
-	\vspace{5mm}
+
+		% \newcounter{aa}
+		% \forloop[1]{aa}{1}{\pocetautoru}{
+		% 	{\Large \autor\arabic{aa}\refei{,}{\arabic{aa}}}
+		% 	}
+		% \\
+	\vspace{2mm}
+		\email
+	\vspace{2mm}
 	\begin{compactenum}
 		\centering
 		\begin{scriptsize}
 		\item \label{vut} VUT v Brně, Fakulta elektrotechniky a komunikačních technologií, Ústav elektroenergetiky, Technická 3058/10, 616 00 Brno, Česká republika
 		\item \label{ujv} UJV
 		\item \label{ujf} UJF
+			% \newcounter{ac}
+			% \forloop[1]{ac}{1}{\pocetautoru}{
+			% \item \label{\arabic{ac}} \instituce\arabic{ac}
+			% }
 		\end{scriptsize}
 	\end{compactenum}
 	\end{center}

@@ -1,5 +1,4 @@
 % "cz" pro češtinu, "sk" pro slovenčinu
-% \jazyk{cz}
 % \rok{2019}
 % \poradi{19}
 % \datum{04}{12}{06}{12}{2019}
@@ -24,6 +23,8 @@
 % \usepackage{lmodern}
 % \usepackage[autostyle,czech=guillemets]{csquotes}
 \documentclass{cygclanek}
+\usepackage[czech]{babel}
+% \usepackage[slovak]{babel}
 % \input{cyg.tex}
 \addbibresource{ref.bib}
 \begin{document}
@@ -36,6 +37,18 @@
 % \affil[2]{Department of Biology, University Y}
 % \author{Jára Cimrman, Zdeněk Svěrák, Petr Pavel}
 \author{Jára Cimrman\refei{,}{vut} Zdeněk Svěrák\refei{,}{ujv} Petr Pavel\refei{}{ujf}}
+
+% \newcounter{pocetautoru}
+% \setcounter{pocetautoru}{3}
+% \newcommand{\autor1{Cimrman}}
+% \newcommand{\instituce1{ORF}}
+% \newcommand{\autor2{Bruncvík}}
+% \newcommand{\instituce2{VUT}}
+% \newcommand{\autor3{Praotec Čech}}
+% \newcommand{\instituce3{VŠB}}
+
+\providecommand{\keywords}[1]{\textbf{\textit{Klíčová slova:}} #1}
+\newcommand{\email}{cimrman\at vut.cz}
 % \instituce{(UJV,FJFI,VUT)}
 % \maily{(cimrman\@ujv.cz,sverak\@fjfi.cz,pavel\@vut.cz)}
 
@@ -46,6 +59,7 @@
 	Cimrman se však nevzdává a ze svého liptákovského ústraní zasahuje konvenční pohádkovou tvorbu jedovatými šípy svých kritických výpadů: "Kdo kdy potkal vlka, který mluví!" To Cimrman nemilosrdně buší do Červené Karkulky. A pokračuje: "Které zvíře dokáže sníst v celku tak veliká sousta, jako jsou babička, Karkulka a třená bábovka? Která dusí! Učíme děti ve školách o zažívacích procesech. Vykládáme jim, jak se potrava rozmělněná v ústech mísí se slinami, jak je dále zpracovávána žaludečními šťávami a peristaltikou střev. Vím, myslivec přišel poměrně brzo, takže trávení teprve započalo, ale přesto nenajdete dítě, které by uvěřilo, že babička s Karkulkou vyšly z vlkových útrob v nažehlených šatečkách a škrobeném neposlintaném fěrtošku."
 	ctete to
 \end{abstract}
+\keywords{foo, bar}
 
 \section{Úvod}
 Cimrman \cite{pelikan} se \at však nevzdává a ze svého liptákovského ústraní zasahuje konvenční pohádkovou tvorbu jedovatými šípy svých kritických výpadů: "Kdo kdy potkal vlka, který mluví!" To Cimrman nemilosrdně buší do Červené Karkulky. A pokračuje: "Které zvíře dokáže sníst v celku tak veliká sousta, jako jsou babička, Karkulka a třená bábovka? Která dusí! Učíme děti ve školách o zažívacích procesech. Vykládáme jim, jak se potrava rozmělněná v ústech mísí se slinami, jak je dále zpracovávána žaludečními šťávami a peristaltikou střev. Vím, myslivec přišel poměrně brzo, takže trávení teprve započalo, ale přesto nenajdete dítě, které by uvěřilo, že babička s Karkulkou vyšly z vlkových útrob v nažehlených šatečkách a škrobeném neposlintaném fěrtošku."

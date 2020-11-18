@@ -1,5 +1,5 @@
 % \documentclass[a4paper,11pt]{combine}
-\documentclass[11pt]{combine}
+\documentclass[a4paper,11pt]{combine}
 % \documentclass{cyg}
 
 % \input{cyg.tex}
@@ -9,7 +9,7 @@
 %\input{commands.tex}
 %\setcounter{tocdepth}{0} % Show sections
 
-\usepackage[slovak,czech]{babel}
+\usepackage[czech]{babel}
 \usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -20,8 +20,13 @@
 \usepackage[style=iso-numeric, backend=biber, language=czech]{biblatex}
 \usepackage{csquotes}
 \usepackage{amsthm}
-% \usepackage{etoolbox}
-% 
+\usepackage{etoolbox}
+\usepackage[hidelinks,unicode]{hyperref}%
+\usepackage{paralist}
+\usepackage{marvosym}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[font=small,labelfont=bf]{caption}
 % options -- styling etc
 % \pagestyle{fancy}
 % \fancyfoot[C]{\thepage}
@@ -112,7 +117,7 @@ In the article by A.~N.~Author on page~%\pageref{art1} ...
 \clearpage
 
 \section{Acknowledgements}      % into main ToC (section 2)
-Among the many ...
+Among the many\dots
 
 % \stdindent
 % \stdskip

@@ -20,9 +20,9 @@
 % 	\usepackage[slovak]{babel}
 % }
 
-\newcommand{\jazyk}[1]{
-	\usepackage[#1]{babel}
-}
+% \newcommand{\jazyk}[1]{
+% 	\usepackage[#1]{babel}
+% }
 
 \usepackage[left=1.5cm,
 		right=1.5cm,
@@ -32,7 +32,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
-\usepackage{fancyhdr}
+%\usepackage{fancyhdr}
 \usepackage{authblk}
 \usepackage{etoolbox}
 \usepackage[style=iso-numeric, backend=biber, language=czech]{biblatex}

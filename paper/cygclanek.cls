@@ -7,26 +7,7 @@
 \ProvidesClass{cygclanek}
  
 % inherit from article class
-% \LoadClass[a4paper,11pt]{article}
-\LoadClass[class=article,crop=false]{standalone}
-\usepackage[subpreambles=true]{standalone}
-\usepackage{import}
-
-% 
-% packages
-%
-
-% \newcommand{\cz}{
-% 	\usepackage[czech]{babel}
-% }
-% 
-% \newcommand{\sk}{
-% 	\usepackage[slovak]{babel}
-% }
-
-% \newcommand{\jazyk}[1]{
-% 	\usepackage[#1]{babel}
-% }
+\LoadClass[a4paper,11pt]{article}
 
 \usepackage[left=1.5cm,
 		right=1.5cm,
@@ -36,7 +17,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
-%\usepackage{fancyhdr}
+\usepackage{fancyhdr}
 \usepackage{authblk}
 \usepackage{etoolbox}
 \usepackage[style=iso-numeric, backend=biber, language=czech]{biblatex}
@@ -48,14 +29,16 @@
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage[font=small,labelfont=bf]{caption}
-% \usepackage{forloop}
+\usepackage{forloop}
+\usepackage{xargs}
+\usepackage{textcomp}
 
 % options -- styling etc
-% \pagestyle{fancy}
-% \fancyfoot[C]{\thepage}
-% \fancyhead[C]{}
-% \fancyhead[L]{\@title}
-% \fancyhead[R]{Mikulášské setkání 2020}
+\pagestyle{fancy}
+\fancyfoot[C]{\thepage}
+\fancyhead[C]{}
+\fancyhead[L]{\@title}
+\fancyhead[R]{Mikulášské setkání 2020}
 
 % commands -- redefinitions
 \renewcommand{\maketitle}{%
@@ -63,13 +46,8 @@
 		\vspace{4mm}
 	{\Huge \textbf{\@title}} \\
 	\vspace{7mm}
-	{\Large \@author} \\
+	{\Large \@author } \\
 
-		% \newcounter{aa}
-		% \forloop[1]{aa}{1}{\pocetautoru}{
-		% 	{\Large \autor\arabic{aa}\refei{,}{\arabic{aa}}}
-		% 	}
-		% \\
 	\vspace{2mm}
 		\email
 	\vspace{2mm}
@@ -79,10 +57,6 @@
 		\item \label{vut} VUT v Brně, Fakulta elektrotechniky a komunikačních technologií, Ústav elektroenergetiky, Technická 3058/10, 616 00 Brno, Česká republika
 		\item \label{ujv} UJV
 		\item \label{ujf} UJF
-			% \newcounter{ac}
-			% \forloop[1]{ac}{1}{\pocetautoru}{
-			% \item \label{\arabic{ac}} \instituce\arabic{ac}
-			% }
 		\end{scriptsize}
 	\end{compactenum}
 	\end{center}
@@ -105,10 +79,10 @@
 $^{\ref{#2}}$%
 }
 
-\newcommand{\pic}[3]{%
+\newcommandx{\obr}[4][4=0.8]{%
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{./img/#1}
+\includegraphics[width=#4\textwidth]{./img/#1}
 \caption{#2}
 \label{#3}
 \end{figure}
@@ -117,16 +91,16 @@ $^{\ref{#2}}$%
 \newcommand{\at}{\MVAt}
 
 
-\newcommand{\dpic}[6]{%
+\newcommandx{\dobr}[8][7=0.49,8=0.49]{%
 \begin{figure}[H]
     \centering
-    \begin{minipage}{0.49\textwidth}
+    \begin{minipage}{#7\textwidth}
         \centering
         \includegraphics[width=0.98\textwidth]{img/#1} % first figure itself
         \caption{#2}
         \label{#3}
     \end{minipage}\hfill
-    \begin{minipage}{0.49\textwidth}
+    \begin{minipage}{#8\textwidth}
         \centering
         \includegraphics[width=0.98\textwidth]{img/#4} % second figure itself
         \caption{#5}
@@ -134,6 +108,43 @@ $^{\ref{#2}}$%
     \end{minipage}
 \end{figure}
 }
+
+\newcommandx{\graf}[4][4=0.8]{%
+\begin{figure}[H]
+\centering
+\captionsetup{name=Graf}
+\includegraphics[width=#4\textwidth]{./img/#1}
+\caption{#2}
+\label{#3}
+\end{figure}
+}
+
+
+\newcommand{\dgraf}[6]{%
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+		\captionsetup{name=Graf}
+        \includegraphics[width=0.98\textwidth]{img/#1} % first figure itself
+        \caption{#2}
+        \label{#3}
+    \end{minipage}\hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+		\captionsetup{name=Graf}
+        \includegraphics[width=0.98\textwidth]{img/#4} % second figure itself
+        \caption{#5}
+        \label{#6}
+    \end{minipage}
+\end{figure}
+}
+
+\renewcommand{\figurename}{Obr.}
+\renewcommand{\tablename}{Tab.}
+\renewcommand{\refname}{Literatura}
+\newcommand\uv[1]{„#1“}					% czech quotation
+
 % \RequirePackage{titling}
 % \documentclass[11pt, a4paper]{article}
 % \usepackage[slovak,czech]{babel}

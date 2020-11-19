@@ -4,8 +4,14 @@
 
 \title{Velmi, ale opravdu velmi dlouhý název članku}
 
-\author{Jára Cimrman\refei{,}{vut} Zdeněk Svěrák\refei{,}{ujv} Petr Pavel\refei{}{ujf}}
-
+\author{Jára Cimrman\refei{,}{vut} Zdeněk Svěrák\refei{,}{ujv} Petr Pavel\refei{,}{ujf} Jan Kretek\refei{}{kkk}}
+% \author{Jára Cimrman\refei{,}{vut} Zdeněk Svěrák, Petr Pavel}
+\newcommand{\inst}{
+	\item \label{vut} VUTBR
+	\item \label{ujv} UJVas
+	\item \label{ujf} UJF CAS
+	\item \label{kkk} KKK
+}
 
 \providecommand{\keywords}[1]{\textbf{\textit{Klíčová slova:}} #1}
 \newcommand{\email}{cimrman\at vut.cz}
@@ -35,17 +41,19 @@ Rád bych teď využil té skutečnosti \ref{fig:takakokotina}, že má dnes slu
 
 aaaa
 
-\begin{table}[!ht]
+\begin{table}[H]
 \centering
 \begin{tabular}{ccc}
+	\toprule
 $\rho$ [\textcent] & $T_e$ [s] & $T_d$ [s] \\
-\hline
+\midrule
 3,6 & $(312,95 \pm 0,01)$ & $(216,92 \pm 0,01)$ \\
 6,5 & $(162,22 \pm 0,02)$ & $(112,44 \pm 0,01)$ \\
 9,8 & $(96,79 \pm 0,09)$ & $(67,61 \pm 0,06)$ \\
 12,8 & $(68,06 \pm 0,02)$ & $(47,18 \pm 0,01)$ \\
 15,5 & $(51,36 \pm 0,06)$ & $(35,60 \pm 0,04)$ \\
 19,0 & $(38,11 \pm 0,04)$ & $(26,47 \pm 0,03)$ \\
+\bottomrule
 \end{tabular}
 \caption{Tabulka -- návrh tzv. \uv{čistá}.}
 \label{mer}
@@ -61,6 +69,32 @@ Pane kolego, já jsem tu hovořil o tom Cimrmanově vynálezu, a vy jste ho vlas
 
 \dgraf{both.png}{Jeden graf.}{fig:dalsi}{calibration.png}{Druhý graf.}{fig:ddalsi}
 Rozumíte, já po vás nechci žádnou přednášku, jenom ten základní princip a jednu dvě zajímavosti. (Jevištní mistr mlčí.)
+
+Jevištní mistr: Žádný vodiče tam nejsou. Přednášející: Aha, tak já do toho tak nevidím. Dobře, že vás tu máme. My jenom vidíme, že jak ona tam princezna Zlatovláska stojí, tak se při plném světle uprostřed jeviště promění. Je to tak, nebo ne? (Jevištní mistr přikývne.)
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+$\rho$ [\textcent] & $T_e$ [s] & $T_d$ [s] \\
+\hline
+3,6 & $(312,95 \pm 0,01)$ & $(216,92 \pm 0,01)$ \\
+\hline
+6,5 & $(162,22 \pm 0,02)$ & $(112,44 \pm 0,01)$ \\
+\hline
+9,8 & $(96,749 \pm 0,009)$ & $(67,061 \pm 0,006)$ \\
+\hline
+12,8 & $(68,06 \pm 0,02)$ & $(47,18 \pm 0,01)$ \\
+\hline
+15,5 & $(51,36 \pm 0,06)$ & $(35,60 \pm 0,04)$ \\
+\hline
+19,0 & $(38,111 \pm 0,004)$ & $(26,417 \pm 0,003)$ \\
+\hline
+\end{tabular}
+\caption{Tabulka \uv{plná}.}
+\label{ver}
+\end{table}
+
 
 \section{Závěr}
 Že vás ještě přerušuji: já jsem si všiml, že tam je taková soustava vodičů vzájemně propojených, že, která je přesně vyvážená, a celé je to, myslím, pevně fixováno v portále, ne?

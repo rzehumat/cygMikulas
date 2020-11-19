@@ -32,6 +32,7 @@
 \usepackage{forloop}
 \usepackage{xargs}
 \usepackage{textcomp}
+\usepackage{booktabs}
 
 % options -- styling etc
 \pagestyle{fancy}
@@ -54,9 +55,10 @@
 	\begin{compactenum}
 		\centering
 		\begin{scriptsize}
-		\item \label{vut} VUT v Brně, Fakulta elektrotechniky a komunikačních technologií, Ústav elektroenergetiky, Technická 3058/10, 616 00 Brno, Česká republika
-		\item \label{ujv} UJV
-		\item \label{ujf} UJF
+		% \item \label{vut} VUT v Brně, Fakulta elektrotechniky a komunikačních technologií, Ústav elektroenergetiky, Technická 3058/10, 616 00 Brno, Česká republika
+		% \item %\label{ujv} UJV
+        % \item %\label{ujf} UJF
+        \inst
 		\end{scriptsize}
 	\end{compactenum}
 	\end{center}

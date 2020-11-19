@@ -1,6 +1,6 @@
-paper/main.aux
-paper/main.blg
-paper/main.fdb_latexmk
-paper/main.fls
-paper/main.log
-paper/synctex.gz
+**/*.aux
+**/*.blg
+**/*fdb_latexmk
+**/*.fls
+**/*.log
+**/synctex.gz

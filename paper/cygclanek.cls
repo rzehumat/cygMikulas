@@ -39,7 +39,7 @@
 \fancyfoot[C]{\thepage}
 \fancyhead[C]{}
 \fancyhead[L]{\@title}
-\fancyhead[R]{Mikulášské setkání 2020}
+\fancyhead[R]{Mikulášské setkání~\rok}
 
 % commands -- redefinitions
 \renewcommand{\maketitle}{%

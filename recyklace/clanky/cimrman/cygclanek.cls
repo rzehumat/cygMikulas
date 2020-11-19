@@ -7,7 +7,11 @@
 \ProvidesClass{cygclanek}
  
 % inherit from article class
-\LoadClass[a4paper,11pt]{article}
+% \LoadClass[a4paper,11pt]{article}
+\LoadClass[class=article,crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\usepackage{import}
+
 % 
 % packages
 %
@@ -20,9 +24,9 @@
 % 	\usepackage[slovak]{babel}
 % }
 
-\newcommand{\jazyk}[1]{
-	\usepackage[#1]{babel}
-}
+% \newcommand{\jazyk}[1]{
+% 	\usepackage[#1]{babel}
+% }
 
 \usepackage[left=1.5cm,
 		right=1.5cm,
@@ -32,7 +36,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
-\usepackage{fancyhdr}
+%\usepackage{fancyhdr}
 \usepackage{authblk}
 \usepackage{etoolbox}
 \usepackage[style=iso-numeric, backend=biber, language=czech]{biblatex}
@@ -47,11 +51,11 @@
 % \usepackage{forloop}
 
 % options -- styling etc
-\pagestyle{fancy}
-\fancyfoot[C]{\thepage}
-\fancyhead[C]{}
-\fancyhead[L]{\@title}
-\fancyhead[R]{Mikulášské setkání 2020}
+% \pagestyle{fancy}
+% \fancyfoot[C]{\thepage}
+% \fancyhead[C]{}
+% \fancyhead[L]{\@title}
+% \fancyhead[R]{Mikulášské setkání 2020}
 
 % commands -- redefinitions
 \renewcommand{\maketitle}{%

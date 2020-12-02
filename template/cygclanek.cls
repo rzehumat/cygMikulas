@@ -33,6 +33,7 @@
 \usepackage{xargs}
 \usepackage{textcomp}
 \usepackage{booktabs}
+\usepackage[czech]{babel}
 
 % options -- styling etc
 \pagestyle{fancy}
@@ -142,4 +143,4 @@ $^{\ref{#2}}$%
 \renewcommand{\figurename}{Obr.}
 \renewcommand{\tablename}{Tab.}
 \renewcommand{\refname}{Literatura}
-\newcommand\uv[1]{„#1“}					% czech quotation
+\renewcommand\uv[1]{„#1“}					% czech quotation

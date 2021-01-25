@@ -37,6 +37,7 @@
 \usepackage{amsmath}
 \usepackage{mhchem}
 \usepackage{siunitx}
+\usepackage{makecell}
 
 % options -- styling etc
 \pagestyle{fancy}

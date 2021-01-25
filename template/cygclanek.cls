@@ -35,6 +35,8 @@
 \usepackage{booktabs}
 \usepackage[czech]{babel}
 \usepackage{amsmath}
+\usepackage{mhchem}
+\usepackage{siunitx}
 
 % options -- styling etc
 \pagestyle{fancy}

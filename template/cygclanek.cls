@@ -41,7 +41,7 @@
 
 % options -- styling etc
 \pagestyle{fancy}
-\fancyfoot[C]{\thepage}
+\fancyfoot[C]{}
 \fancyhead[C]{}
 \fancyhead[L]{\@title}
 \fancyhead[R]{Mikulášské setkání 2020}

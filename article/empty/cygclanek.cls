@@ -183,3 +183,4 @@ $^{\ref{#2}}$%
 \renewenvironment{abstract}
  {\par\noindent\textbf{\abstractname} \ignorespaces \newline \noindent \begin{small}}
  {\par\medskip\end{small}}
+ \graphicspath{{figures/}}

@@ -52,15 +52,17 @@
 		\vspace{4mm}
 	{\Huge \textbf{\@title}} \\
 	\vspace{7mm}
-	{\Large \@author } \\
+	{\Large \Names } \\
 
 	\vspace{2mm}
 		\Email
 	\vspace{2mm}
+    \Institutions
 	\begin{compactenum}
 		\centering
 		\begin{scriptsize}
-        \inst
+    %     \inst
+          \Institutions
 		\end{scriptsize}
 	\end{compactenum}
 	\end{center}
@@ -162,4 +164,28 @@ $^{\ref{#2}}$%
 \newcommand{\keywords}[1]{
     \textbf{\textit{Klíčová slova:}} #1
 }
-% \providecommand{\keywords}[1]{\textbf{\textit{Klíčová slova:}} \Keywords}
+
+\newcommand{\Names}{
+    \name[*]{Sparrow, Jack}{1},
+    \name{Potter, Harry}{2}
+}
+
+\newcommand{\names}[1]{
+    \renewcommand{\Names}{#1}
+}
+\newcommand{\institution}[2]{
+%     #1 \ti{#2} \\
+    \item \label{#1} #2
+}
+\newcommand{\Institutions}{
+    \institution{es1}{Epic School 1}
+    \institution{hgw}{Hogwarts}
+}
+\newcommand{\institutions}[1]{
+    \renewcommand{\Institutions}{#1}
+}
+\newcommand{\name}[3][]{
+    #2$^{\ref{#3}}$#1
+}
+
+

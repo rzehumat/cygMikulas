@@ -1,0 +1,251 @@
+\documentclass[11pt,oneside]{article}
+
+% proper czech language
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[czech]{babel}
+
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{booktabs}
+
+\usepackage{xargs}
+\usepackage[bottom=2cm,left=2cm,right=2cm,top=2cm]{geometry}
+
+% to preserve links into pdfpages
+\usepackage{pax}
+
+\titleformat*{\section}{\LARGE\bfseries}
+
+% hide horizontal lines, cause they are already in the articles
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\newcommand{\clanek}[3]{
+    \includepdf[
+        pages=-,
+        pagecommand={},
+        addtotoc={
+            1,subsection,2,
+            #3 (\textit{#2}),
+            #1}
+    ]
+    {./papers/#1.pdf}
+}
+
+% sponsors' footer for title page
+\newcommandx{\sponzori}[5]{%
+       \textit{Za podpory}
+       \vspace{0.1cm}
+       \hrule
+\begin{figure}[b]
+         \href{https://www.fekt.vut.cz/}{\includegraphics[height=45px]{img/sponzori/#1}}
+         \qquad
+         \href{http://www.spolky-csvts.cz/cns/cyg/}{\includegraphics[height=45px]{img/sponzori/#2}}
+         \qquad
+         \href{http://www.spolky-csvts.cz/cns/}{\includegraphics[height=45px]{img/sponzori/#3}}
+         \qquad
+         \href{https://www.ujv.cz/}{\includegraphics[height=45px]{img/sponzori/#4}}
+         \qquad
+         \href{http://www.csvts.cz/index.php/cs/}{\includegraphics[height=45px]{img/sponzori/#5}}
+\end{figure}
+}
+
+\fancypagestyle{patickaSponzoru}
+{
+    \fancyhead{}
+    \fancyfoot[C]{
+        \href{https://www.fekt.vut.cz/}{\includegraphics[height=35px]{./img/sponzori/fekt.png}}
+        \qquad
+        \href{http://www.spolky-csvts.cz/cns/cyg/}{\includegraphics[height=35px]{./img/sponzori/cyg.png}}
+        \qquad
+        \href{http://www.spolky-csvts.cz/cns/}{\includegraphics[height=35px]{./img/sponzori/cns.png}}
+        \qquad
+        \href{https://www.ujv.cz/}{\includegraphics[height=35px]{./img/sponzori/ujv.png}}
+        \qquad
+        \href{http://www.csvts.cz/index.php/cs/}{\includegraphics[height=35px]{./img/sponzori/csvts.png}}
+    }
+}
+
+\fancypagestyle{paper}
+{
+    \fancyhead{}
+    \fancyfoot[C]{\thepage}
+}
+
+\newcommand{\event}[4]{
+    #1 & -- & #2 & #4 \\
+     &  &  & (\textit{#3}) \\
+}
+
+\newcommand{\bigEvent}[2]{
+    \multicolumn{3}{l}{\Large{\textbf{#1}}}  & \Large{\textbf{#2}} \\
+}
+
+\newcommand{\mezera}{
+    \rule{0pt}{1ex} & & & \\
+}
+
+\newcommand{\oceneny}[3]{
+    #1~místo & \textit{#2} #3 \\
+}
+
+\title{to mikulas}
+\author{rzehumat}
+
+\date{April 2021}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+
+\begin{titlepage}
+   \begin{center}
+       \vspace*{4cm}
+
+       \LARGE{\textbf{Jaderná energetika v~pracích mladé generace~--~2020}}
+
+       \vspace{0.8cm}
+
+       \Large{Mikulášské setkání Mladé generace ČNS}
+
+       \vfill
+            
+       Online\\
+       27.~1.~2021\\
+       
+       \vfill
+       
+       \sponzori{fekt.png}{cyg.png}{cns.png}{ujv.png}{csvts.png}
+            
+   \end{center}
+\end{titlepage}
+
+
+\tableofcontents
+\newpage
+
+\setcounter{secnumdepth}{-1}
+
+\pagestyle{patickaSponzoru}
+\section{Program setkání}
+\Large{Středa 27.~1.~2021}
+\begin{table}[h]
+    \begin{tabular}{r c l p{0.85\textwidth}}
+        \bigEvent{9:00}{Oficiální zahájení setkání}
+        9:00 & -- & 9:10 & Úvodní slovo garanta setkání \\
+         \mezera
+        \bigEvent{9:10}{Prezentace oceněných prací studentů}
+        \event{9:10}{9:30}{Matyáš Junek}{Energetické využití jaderné fúze}
+        \event{9:30}{9:50}{Tomáš Křinecký}{Prodlužování životnosti JE Dukovany}
+        \event{9:50}{10:10}{Robin Krempaský}{Rekonstrukce výkonu AZ metodou RBF pro monitorování reaktorů VVER}
+        \event{10:10}{10:30}{Miroslav Vejvoda}{Modelování vyhořívajících absorbátorů ve výpočtech neutronově-fyzikálních charakteristik aktivních zón}
+        \event{10:30}{10:45}{Filip Fejt}{Analýza termohydraulických modelů reaktoru VR-1 s využitím trojrozměrné kinetiky}
+        \mezera
+        \bigEvent{11:00}{Prezentace mladých odborníků}
+        \event{11:00}{11:15}{Jan Syblík}{Subkanálová analýza VVER-440 pomocí kódu SUBCHANFLOW}
+        \event{11:15}{11:30}{Bence Mészáros}{Výzkum materiálových parametrů koria pomocí tavení ve studeném kelímku}
+        \event{11:30}{11:45}{Michal Cihlář}{Vliv doby expozice konstrukčních materiálů v tavenině NaF-NaBF4 při statických korozních testech}
+        \event{12:00}{12:15}{Ondřej Pašta}{Testování debris fretting jevu v CVŘ}
+        \event{12:15}{12:30}{Zbyněk Hlaváč}{Ultrazvuková kontrola betonu biologického stínění  jaderné elektrárny Greifswald s použitím jádrových vývrtů}
+        \event{12:30}{12:45}{Martin Ševeček}{Proč zavádět nové typy jaderných paliv a jaká jsou jejich omezení?}
+        \mezera
+        \bigEvent{12:45}{Ukončení Mikulášského setkání}
+    \end{tabular}
+\end{table}  
+
+\newpage
+
+\pagestyle{patickaSponzoru}
+
+\section{O Mikulášském setkání}
+{\normalsize Mikulášské setkání je akcí Mladé generace České nukleární společnosti určené především mladým lidem studujícím či pracujícím v~jaderné oblasti. Smyslem setkání je propojit mladé lidi z~různých koutů České republiky a~umožnit jim prezentovat jejich práci. Hlavní náplní Mikulášského setkání je prezentace oceněných bakalářských a~magisterských prací v~soutěži, která je pravidelně pořádána Českou nukleární společností společně s~ÚJV Řež.}
+
+\vspace{1cm}
+
+\section{O Mladé generaci ČNS}
+{\normalsize Mladá generace České nukleární společnosti (CYG - Czech Young Generation) byla založena 7.~7.~1997. CYG je jednou ze sekcí České nukleární společnsti a~je také členem Young Generation Network při Evropské nukleární společnosti a~International Youth Nuclear Congress~(IYNC). Sdružuje mladé lidi do 36 let z~jaderného odvětví. Hlavním cílem Mladé generace je zajistit setkávání členů, a~tak pomoci jejich rozvoji, získávání kontaktů a~sociálních vazeb v~jaderné komunitě. Každoročně pořádá pro členy CYG několik akcí jako jsou například exkurze do tuzemských i~zahraničních jaderných provozů (Aprílové setkání) či pravidelná setkání se slovenskou Mladou generací.}
+
+
+\newpage
+\section{Oceněné studentské práce 2020}
+{\normalsize Na Mikulášském setkání byly vyhlášeny nejlepší bakalářské,diplomové a disertační práce v jaderných oborech za rok 2020. Oceněny byly následující práce:}\\
+
+\noindent\textbf{\large{Bakalářské práce}}
+\begin{table}[h]
+    \begin{tabular}{r p{0.85\textwidth}}
+        % TODO fix these ugly ":" -- if not empty, than :
+        \oceneny{I.}{Miroslav Vejvoda:}{Modelování vyhořívajících absorbátorů ve výpočtech neutronově-fyzikálních charakteristik aktivních zón}
+        \oceneny{II.}{Robin Krempaský:}{Rekonstrukce výkonu AZ metodou RBF pro monitorování reaktorů VVER}
+        \oceneny{III.}{Matyáš Junek:}{Energetické využití jaderné fúze}
+        \oceneny{III.}{Tomáš Křinecký:}{Prodlužování životnosti JE Dukovany}
+    \end{tabular}
+\end{table}  
+
+
+\noindent\textbf{\large{Diplomové práce}}
+\begin{table}[h]
+    \begin{tabular}{r p{0.85\textwidth}}
+        \oceneny{I.}{Ondřej Hlinka:}{Měření hydrodynamiky přestupu tepla pro vnitřní úlohu zaplavování válcové geometrie}
+        \oceneny{II.}{Jana Matoušková:}{Metoda Monte Carlo pro stanovení neurčitosti koeficientu násobení vlivem neurčitosti izotopického složení vyhořelého jaderného paliva}
+        \oceneny{III.}{Michal Cihlář:}{Vliv doby expozice konstrukčních materiálů v tavenině NaF-NaBF4 při statických korozních testech}
+    \end{tabular}
+\end{table}  
+
+
+\noindent\textbf{\large{Dizertační práce}}
+\begin{table}[h]
+    \begin{tabular}{r p{0.85\textwidth}}
+        \oceneny{I.}{-}{}
+        \oceneny{II.}{Filip Fejt:}{Analýza termohydraulických modelů reaktoru VR-1 s využitím trojrozměrné kinetiky}
+        \oceneny{III.}{-}{}
+    \end{tabular}
+\end{table}  
+\vfill
+
+\newpage
+\pagestyle{paper}
+
+\phantomsection
+\addcontentsline{toc}{section}{Články}
+
+\clanek{junek}{Matyáš Junek}{Energetické využití jaderné fúze}
+\clanek{krinecky}{Tomáš Křinecký}{Prodlužování životnosti JE Dukovany}
+\clanek{krempasky}{Robin Krempaský}{Rekonstrukce výkonu AZ metodou RBF pro monitorování reaktorů VVER}
+\clanek{vejvoda}{Miroslav Vejvoda}{Modelování vyhořívajících absorbátorů ve výpočtech neutronově-fyzikálních charakteristik aktivních zón}
+\clanek{syblik}{Jan Syblík}{Subkanálová analýza VVER-440 pomocí kódu SUBCHANFLOW}
+\clanek{meszaros}{Bence Mészáros}{Výzkum materiálových parametrů koria pomocí tavení ve studeném kelímku}
+\clanek{cihlar}{Michal Cihlář}{Vliv doby expozice konstrukčních materiálů v tavenině NaF-NaBF4 při statických korozních testech}
+\clanek{pasta}{Ondřej Pašta}{Testování debris fretting jevu v CVŘ}
+\clanek{hlavac}{Zbyněk Hlaváč}{Ultrazvuková kontrola betonu biologického stínění jaderné elektrárny Greifswald s použitím jádrových vývrtů}
+\clanek{matouskova}{Jana Matoušková}{Metoda Monte Carlo pro stanovení neurčitosti koeficientu násobení vlivem neurčitosti izotopického složení vyhořelého jaderného paliva}
+
+
+\newpage
+\pagestyle{patickaSponzoru}
+
+\vspace*{13cm}
+
+\begin{table}[h]%
+    \begin{tabular}{p{0.2\textwidth} p{0.8\textwidth}}%
+        \multicolumn{2}{l}{Jaderná energetika v pracích mladé generace – 2020} \\
+                            &                           \\
+        Nakladatel:         & Česká nukleární společnost, z. s. (org. č.) \\
+                            & V Holešovickách 747/2     \\
+                            & 180 00 Praha              \\
+        Autor:              & kolektiv autorů           \\
+        Rok vydání: 	    & 2021, vydání první        \\
+        Forma vydání:       & vydáno pouze na CD-ROM    \\    
+        Materiály sestavil: & Matěj Rzehulka            \\
+        ISBN:               & 978-80-02-02935-9         \\
+                            &                           \\
+        \multicolumn{2}{l}{Příspěvky jednotlivých autorů nebyly textově ani jazykově upravovány}
+    \end{tabular}%
+\end{table}%
+\vfill
+
+\end{document}

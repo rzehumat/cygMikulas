@@ -158,3 +158,8 @@ $^{\ref{#2}}$%
 \newcommand{\email}[1]{
     \renewcommand{\Email}{#1}
 }
+
+\newcommand{\keywords}[1]{
+    \textbf{\textit{Klíčová slova:}} #1
+}
+% \providecommand{\keywords}[1]{\textbf{\textit{Klíčová slova:}} \Keywords}

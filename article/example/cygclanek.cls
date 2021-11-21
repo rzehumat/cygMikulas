@@ -48,21 +48,13 @@
 
 % commands -- redefinitions
 \renewcommand{\maketitle}{%
-	% \begin{center}
 		\vspace{4mm}
 	{\noindent\Huge \textbf{\@title}} \\
-	% \end{center}
-	% \vspace{7mm}
-    % {\Large \Names } \\
     {\hspace{0.02em}\Large \Names } \\
-	% ~\vspace{10em}~
     \newline
         $~^*$Korespondenční autor: \Email
-        % \hspace{1em}$~^*$Korespondenční autor: \Email
-	%\vspace{1mm}
     \newline
     \begin{compactenum}
-		% \centering
 		\begin{small}
           \Institutions
 		\end{small}
@@ -158,7 +150,6 @@ $^{\ref{#2}}$%
     \renewcommand{\Rok}{#1}
 }
 
-% \newcommand{\Email}{sahko@posti.fi}
 \newcommand{\email}[1]{
     \renewcommand{\Email}{#1}
 }
@@ -176,7 +167,6 @@ $^{\ref{#2}}$%
     \renewcommand{\Names}{#1}
 }
 \newcommand{\institution}[2]{
-%     #1 \ti{#2} \\
     \item \label{#1} #2
 }
 \newcommand{\Institutions}{
@@ -191,5 +181,5 @@ $^{\ref{#2}}$%
 }
 
 \renewenvironment{abstract}
- {\par\noindent\textbf{\abstractname} \ignorespaces \noindent \begin{small}}
+ {\par\noindent\textbf{\abstractname} \ignorespaces \newline \noindent \begin{small}}
  {\par\medskip\end{small}}

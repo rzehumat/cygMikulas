@@ -1,40 +1,31 @@
 \documentclass{cygclanek}
-
-% odkaz na dokument s citacemi sem
 \addbibresource{ref.bib}
-
 \begin{document}
 
-\title{Velmi, ale opravdu velmi dlouhý název članku}
+\title{Velmi, velmi dlouhý název článku}
 
-
-\newcommand{\inst}{
-	\item \label{vut} VUTBR
-	\item \label{ujv} UJVas
-	\item \label{ujf} UJF CAS
-	\item \label{kkk} KKK
+\names{
+    \name[*]{Jméno Příjmení}{inst1}, \name{Jméno Příjmení}{inst2}
+}
+\institutions{
+    \institution{inst1}{Instituce1}
+    \institution{inst2}{Instituce 2}
 }
 
-\author{Jára Cimrman\refei{,}{vut} Zdeněk Svěrák\refei{,}{ujv} Petr Pavel\refei{,}{ujf} Jan Kretek\refei{}{kkk}}
-
-\providecommand{\keywords}[1]{\textbf{\textit{Klíčová slova:}} #1}
-\newcommand{\email}{cimrman\at vut.cz}
-\newcommand{\rok}{2020}
+\email{email@instituce.domena}
+\rok{2035}
 
 \maketitle
 \begin{abstract}
-	Sem napište Váš skvělý abstrakt.
+    Abstrakt abstrakt
 \end{abstract}
-
-\keywords{klicSlovo1, klicSlovo2, klicSlovo3}
+\keywords{slovo1, slovo2}
 
 \section{Úvod}
-Něco sem píšu\dots
-
 
 
 \section{Závěr}
-Něco sem.
+
 
 
 \printbibliography[title={Literatura}]

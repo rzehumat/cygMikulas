@@ -57,7 +57,7 @@
 	\vspace{2mm}
 		\Email
 	\vspace{2mm}
-    \Institutions
+    % \Institutions
 	\begin{compactenum}
 		\centering
 		\begin{scriptsize}

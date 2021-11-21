@@ -55,16 +55,19 @@
 	% \vspace{7mm}
     % {\Large \Names } \\
     {\hspace{0.02em}\Large \Names } \\
-	\vspace{1em}
+	% ~\vspace{10em}~
+    \newline
         $~^*$Korespondenční autor: \Email
         % \hspace{1em}$~^*$Korespondenční autor: \Email
-	~%\vspace{1mm}
+	%\vspace{1mm}
+    \newline
     \begin{compactenum}
 		% \centering
-		\begin{footnotesize}
+		\begin{small}
           \Institutions
-		\end{footnotesize}
+		\end{small}
 	\end{compactenum}
+    \vspace{2em}
 }
 
 % commands -- new
@@ -186,3 +189,7 @@ $^{\ref{#2}}$%
 \newcommand{\name}[3][]{
     #2$^{\ref{#3}}$#1
 }
+
+\renewenvironment{abstract}
+ {\par\noindent\textbf{\abstractname} \ignorespaces \noindent \begin{small}}
+ {\par\medskip\end{small}}

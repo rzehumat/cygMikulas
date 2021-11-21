@@ -48,24 +48,23 @@
 
 % commands -- redefinitions
 \renewcommand{\maketitle}{%
-	\begin{center}
+	% \begin{center}
 		\vspace{4mm}
-	{\Huge \textbf{\@title}} \\
-	\vspace{7mm}
-	{\Large \Names } \\
-
-	\vspace{2mm}
-		\Email
-	\vspace{2mm}
-    % \Institutions
-	\begin{compactenum}
-		\centering
-		\begin{scriptsize}
-    %     \inst
+	{\noindent\Huge \textbf{\@title}} \\
+	% \end{center}
+	% \vspace{7mm}
+    % {\Large \Names } \\
+    {\hspace{0.02em}\Large \Names } \\
+	\vspace{1em}
+        $~^*$Korespondenční autor: \Email
+        % \hspace{1em}$~^*$Korespondenční autor: \Email
+	~%\vspace{1mm}
+    \begin{compactenum}
+		% \centering
+		\begin{footnotesize}
           \Institutions
-		\end{scriptsize}
+		\end{footnotesize}
 	\end{compactenum}
-	\end{center}
 }
 
 % commands -- new
@@ -187,5 +186,3 @@ $^{\ref{#2}}$%
 \newcommand{\name}[3][]{
     #2$^{\ref{#3}}$#1
 }
-
-

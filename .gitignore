@@ -10,3 +10,5 @@
 **/*synctex.gz
 template/main.pdf
 article/empty/main.pdf
+yearbook/figures/sponzori/*
+yearbook/papers/**

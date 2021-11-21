@@ -55,7 +55,7 @@
 	{\Large \@author } \\
 
 	\vspace{2mm}
-		\email
+		\Email
 	\vspace{2mm}
 	\begin{compactenum}
 		\centering
@@ -154,3 +154,7 @@ $^{\ref{#2}}$%
     \renewcommand{\Rok}{#1}
 }
 
+% \newcommand{\Email}{sahko@posti.fi}
+\newcommand{\email}[1]{
+    \renewcommand{\Email}{#1}
+}

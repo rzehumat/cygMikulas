@@ -10,7 +10,7 @@ pdf/*.pax: pdf/*.pdf
 
 pdf/*.pdf: papers/**/*.tex papers/**/*.bbl papers/**/*.bcf papers/**/*.blg cygclanek.cls papers/**/img/*
 	# for $folder in papers
-	# 	papers/$folder/$folder.pdf: papers/$folder/vsechny ty bcf hovna
+	# 	papers/$folder/$folder.pdf: papers/$folder/all bcf and similar files
 	# 		# pdflatex clanek
 	# 		# pdflatex clanek
 	# 		# mv clanek.pdf pdf/$folder.pdf

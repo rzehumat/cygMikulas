@@ -44,26 +44,22 @@
 \fancyfoot[C]{}
 \fancyhead[C]{}
 \fancyhead[L]{\@title}
-\fancyhead[R]{Mikulášské setkání 2020}
+\fancyhead[R]{Mikulášské setkání \Rok}
 
 % commands -- redefinitions
 \renewcommand{\maketitle}{%
-	\begin{center}
 		\vspace{4mm}
-	{\Huge \textbf{\@title}} \\
-	\vspace{7mm}
-	{\Large \@author } \\
-
-	\vspace{2mm}
-		\email
-	\vspace{2mm}
-	\begin{compactenum}
-		\centering
-		\begin{scriptsize}
-        \inst
-		\end{scriptsize}
+	{\noindent\Huge \textbf{\@title}} \\
+    {\hspace{0.02em}\Large \Names } \\
+    \newline
+        $~^*$Korespondenční autor: \Email
+    \newline
+    \begin{compactenum}
+		\begin{small}
+          \Institutions
+		\end{small}
 	\end{compactenum}
-	\end{center}
+    \vspace{2em}
 }
 
 % commands -- new
@@ -148,3 +144,43 @@ $^{\ref{#2}}$%
 \renewcommand{\tablename}{Tab.}
 \renewcommand{\refname}{Literatura}
 \renewcommand\uv[1]{„#1“}					% czech quotation
+
+\newcommand{\Rok}{0000}
+\newcommand{\rok}[1]{
+    \renewcommand{\Rok}{#1}
+}
+
+\newcommand{\email}[1]{
+    \renewcommand{\Email}{#1}
+}
+
+\newcommand{\keywords}[1]{
+    \textbf{\textit{Klíčová slova:}} #1
+}
+
+\newcommand{\Names}{
+    \name[*]{Sparrow, Jack}{1},
+    \name{Potter, Harry}{2}
+}
+
+\newcommand{\names}[1]{
+    \renewcommand{\Names}{#1}
+}
+\newcommand{\institution}[2]{
+    \item \label{#1} #2
+}
+\newcommand{\Institutions}{
+    \institution{es1}{Epic School 1}
+    \institution{hgw}{Hogwarts}
+}
+\newcommand{\institutions}[1]{
+    \renewcommand{\Institutions}{#1}
+}
+\newcommand{\name}[3][]{
+    #2$^{\ref{#3}}$#1
+}
+
+\renewenvironment{abstract}
+ {\par\noindent\textbf{\abstractname} \ignorespaces \newline \noindent \begin{small}}
+ {\par\medskip\end{small}}
+ \graphicspath{{figures/}}

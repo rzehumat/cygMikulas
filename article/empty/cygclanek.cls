@@ -47,13 +47,12 @@
 \fancyhead[R]{Mikulášské setkání \Rok}
 
  \graphicspath{{figures/}}
- \graphicspath{{img/}}
 
 % commands -- redefinitions
 \renewcommand{\maketitle}{%
-		\vspace{4mm}
 	{\noindent\Huge \textbf{\@title}} \\
-    {\hspace{0.02em}\Large \Names } \\
+
+    {\noindent\Large \Names } \\
     \newline
         $~^*$Korespondenční autor: \Email
     \newline

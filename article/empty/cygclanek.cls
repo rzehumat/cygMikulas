@@ -179,7 +179,7 @@ $^{\ref{#2}}$%
     \renewcommand{\Institutions}{#1}
 }
 \newcommand{\name}[3][]{
-    #2$^{\ref{#3}}$#1
+   #2$^{\ref{#3}}$#1%
 }
 
 \renewenvironment{abstract}

@@ -32,7 +32,7 @@ it does not look good.
     \centering
     \caption{This is a caption of the table below.}
     \label{tab:example_classic}
-    \begin{tabular}{c c c}
+    \begin{tabular}{|c|c|c|}
         \hline
             a & b & c \\
         \hline

@@ -47,6 +47,7 @@
 \fancyhead[R]{Mikulášské setkání \Rok}
 
  \graphicspath{{figures/}}
+ \graphicspath{{img/}}
 
 % commands -- redefinitions
 \renewcommand{\maketitle}{%

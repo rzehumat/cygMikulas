@@ -46,6 +46,9 @@
 \fancyhead[L]{\@title}
 \fancyhead[R]{Mikulášské setkání \Rok}
 
+ \graphicspath{{figures/}}
+ \graphicspath{{img/}}
+
 % commands -- redefinitions
 \renewcommand{\maketitle}{%
 		\vspace{4mm}
@@ -82,7 +85,7 @@ $^{\ref{#2}}$%
 \newcommandx{\obr}[4][4=0.8]{%
 \begin{figure}[H]
 \centering
-\includegraphics[width=#4\textwidth]{./img/#1}
+\includegraphics[width=#4\textwidth]{#1}
 \caption{#2}
 \label{#3}
 \end{figure}
@@ -96,13 +99,13 @@ $^{\ref{#2}}$%
     \centering
     \begin{minipage}{0.49\textwidth}
         \centering
-        \includegraphics[width=#7\textwidth]{img/#1} % first figure itself
+        \includegraphics[width=#7\textwidth]{#1} % first figure itself
         \caption{#2}
         \label{#3}
     \end{minipage}\hfill
     \begin{minipage}{0.49\textwidth}
         \centering
-        \includegraphics[width=#8\textwidth]{img/#4} % second figure itself
+        \includegraphics[width=#8\textwidth]{#4} % second figure itself
         \caption{#5}
         \label{#6}
     \end{minipage}
@@ -113,7 +116,7 @@ $^{\ref{#2}}$%
 \begin{figure}[H]
 \centering
 \captionsetup{name=Graf}
-\includegraphics[width=#4\textwidth]{./img/#1}
+\includegraphics[width=#4\textwidth]{#1}
 \caption{#2}
 \label{#3}
 \end{figure}
@@ -126,14 +129,14 @@ $^{\ref{#2}}$%
     \begin{minipage}{0.49\textwidth}
         \centering
 		\captionsetup{name=Graf}
-        \includegraphics[width=0.98\textwidth]{img/#1} % first figure itself
+        \includegraphics[width=0.98\textwidth]{#1} % first figure itself
         \caption{#2}
         \label{#3}
     \end{minipage}\hfill
     \begin{minipage}{0.49\textwidth}
         \centering
 		\captionsetup{name=Graf}
-        \includegraphics[width=0.98\textwidth]{img/#4} % second figure itself
+        \includegraphics[width=0.98\textwidth]{#4} % second figure itself
         \caption{#5}
         \label{#6}
     \end{minipage}
@@ -183,4 +186,3 @@ $^{\ref{#2}}$%
 \renewenvironment{abstract}
  {\par\noindent\textbf{\abstractname} \ignorespaces \newline \noindent \begin{small}}
  {\par\medskip\end{small}}
- \graphicspath{{figures/}}

@@ -184,7 +184,7 @@ $^{\ref{#2}}$%
 }
 
 \renewenvironment{abstract}
- {\par\noindent\textbf{\abstractname} \ignorespaces \newline \noindent \begin{small}}
+{\par\noindent\textbf{\abstractname} \newline \begin{small}}
  {\par\medskip\end{small}}
 
  \newcommand{\tb}[1]{\textbf{#1}}

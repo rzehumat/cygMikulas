@@ -38,6 +38,7 @@
 \usepackage{mhchem}
 \usepackage{siunitx}
 \usepackage{makecell}
+\usepackage{indentfirst}
 
 % options -- styling etc
 \pagestyle{fancy}

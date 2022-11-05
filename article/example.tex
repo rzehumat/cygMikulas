@@ -225,33 +225,32 @@ Alternativně (jelikož syntax výše je poměrně zdlouhavá), lze použít zkr
 \obr{fjfi.pdf}{Nejaky obrazek bez nepovinneho \uv{parametru}. Vypada trochu moc
 velky.}{fig:moc-velky-obrazek}[0.4]
 \end{verbatim}
-% 
-% \obr{fjfi.pdf}{Nejaky obrazek bez nepovinneho \uv{parametru}. Vypada trochu moc
-% velky.}{fig:moc-velky-obrazek}[0.4]
-% 
-% Název \uv{Obrázek} se ne vždy hodí. Název se dá změnit pomocí \verb|\captionsetup{name=...}|, např.
-% 
-% \begin{verbatim}
-% \begin{figure}[h]
-%     \centering
-%     \captionsetup{name=Graf}
-%     \includegraphics[width=0.4\textwidth]{both.png}
-%     \caption{Nějaký graf.}
-%     \label{fig:graf}
-% \end{figure}
-% \end{verbatim}
-% 
-% \begin{figure}[h]
-%     \centering
-%     \captionsetup{name=Graf}
-%     \includegraphics[width=0.4\textwidth]{both.png}
-%     \caption{Nějaký graf.}
-%     \label{fig:graf}
-% \end{figure}
-% 
-% Zkrácená verze pak je \verb|\graf{both.png}{Nejaky graf.}{fig:takygraf}|.
-% \graf{both.png}{Nejaky graf.}{fig:takygraf}
-% 
+
+% \obr{fjfi.pdf}{Nejaky obrazek bez nepovinneho parametru. Vypada trochu moc velky.}{moc-velky-obrazek}[0.4]
+
+Název \uv{Obrázek} se ne vždy hodí. Název se dá změnit pomocí \verb|\captionsetup{name=...}|, např.
+
+\begin{verbatim}
+\begin{figure}[h]
+    \centering
+    \captionsetup{name=Graf}
+    \includegraphics[width=0.4\textwidth]{both.png}
+    \caption{Nějaký graf.}
+    \label{fig:graf}
+\end{figure}
+\end{verbatim}
+
+\begin{figure}[h]
+    \centering
+    \captionsetup{name=Graf}
+    \includegraphics[width=0.4\textwidth]{both.png}
+    \caption{Nějaký graf.}
+    \label{fig:graf}
+\end{figure}
+
+Zkrácená verze pak je \verb|\graf{both.png}{Nejaky graf.}{fig:takygraf}|.
+\graf{both.png}{Nejaky graf.}{fig:takygraf}
+
 Je-li potřeba dát dva obrázky vedle sebe, lze použít \verb|minipage|.
 \begin{verbatim}
     \begin{figure}[H]

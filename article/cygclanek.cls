@@ -90,7 +90,7 @@ $^{\ref{#2}}$%
 }
 
 \newcommandx{\obr}[4][4=0.8]{%
-\begin{figure}[H]
+\begin{figure}[h]
 \centering
 \includegraphics[width=#4\textwidth]{#1}
 \caption{#2}

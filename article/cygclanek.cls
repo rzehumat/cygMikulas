@@ -195,3 +195,9 @@ $^{\ref{#2}}$%
  {\par\medskip\end{small}}
 
  \newcommand{\tb}[1]{\textbf{#1}}
+
+ \let\underscore\_                                           % underscore sign
+\let\xor\^                                                  % xor sign
+\renewcommand\_[2][1]{\ifmmode _{\textnormal{\scalebox{#1}{#2}}}\else\underscore#2\fi} %roman subscript
+\renewcommand\^[2][1]{\ifmmode ^{\textnormal{\scalebox{#1}{#2}}}\else\xor#2\fi} %roman superscript
+\def\smallind{0.8}

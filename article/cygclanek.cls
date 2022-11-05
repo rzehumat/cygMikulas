@@ -52,7 +52,7 @@
 \fancyfoot[C]{}
 \fancyhead[C]{}
 \fancyhead[L]{\@title}
-\fancyhead[R]{Mikulášské setkání \Rok}
+\fancyhead[R]{Mikulášské setkání \Year}
 
  \graphicspath{{figures/}}
 
@@ -155,9 +155,9 @@ $^{\ref{#2}}$%
 \renewcommand{\refname}{Literatura}
 \renewcommand\uv[1]{„#1“}					% czech quotation
 
-\newcommand{\Rok}{0000}
-\newcommand{\rok}[1]{
-    \renewcommand{\Rok}{#1}
+\newcommand{\Year}{0000}
+\renewcommand{\year}[1]{
+    \renewcommand{\Year}{#1}
 }
 
 \newcommand{\email}[1]{

@@ -1,18 +1,30 @@
 @Inbook{pelikan,
-author="Pelikan, Martin
-and Sastry, Kumara
-and Goldberg, David E.",
-editor="Pelikan, Martin
-and Sastry, Kumara
-and Cant{\'u}Paz, Erick",
-title="Multiobjective Estimation of Distribution Algorithms",
-bookTitle="Scalable Optimization via Probabilistic Modeling",
-year="2006",
-publisher="Springer Berlin Heidelberg",
-address="Berlin, Heidelberg",
-pages="223--248",
-isbn="978-3-540-34954-9",
-doi="10.1007/978-3-540-34954-9_10",
-url="https://doi.org/10.1007/978-3-540-34954-9_10"
+    author="Pelikan, Martin
+    and Sastry, Kumara
+    and Goldberg, David E.",
+    editor="Pelikan, Martin
+    and Sastry, Kumara
+    and Cant{\'u}Paz, Erick",
+    title="Multiobjective Estimation of Distribution Algorithms",
+    bookTitle="Scalable Optimization via Probabilistic Modeling",
+    year="2006",
+    publisher="Springer Berlin Heidelberg",
+    address="Berlin, Heidelberg",
+    pages="223--248",
+    isbn="978-3-540-34954-9",
+    doi="10.1007/978-3-540-34954-9_10",
+    url="https://doi.org/10.1007/978-3-540-34954-9_10"
 }
-
+@article{trace_parcs,
+title = {Progress in the development of an implicit steady state solution in the coupled code TRACE/PARCS},
+journal = {Progress in Nuclear Energy},
+volume = {66},
+pages = {1-12},
+year = {2013},
+issn = {0149-1970},
+doi = {https://doi.org/10.1016/j.pnucene.2013.02.009},
+url = {https://www.sciencedirect.com/science/article/pii/S0149197013000450},
+author = {M.S. Ellis and J. Watson and K. Ivanov},
+keywords = {Implicit coupling, TRACE, PARCS, Multiphysics},
+abstract = {This paper describes the implementation of an implicit steady state solution method in the TRAC/RELAP Advanced Computational Engine (TRACE) thermal-hydraulics system code and Purdue Advanced Reactor Core Simulator (PARCS) code with the goal of improving solution stability and efficiency. The implicit steady state solution method has been implemented within the framework of the existing psuedo-transient solution method in TRACE and includes time-dependent thermal-hydraulic and heat transfer equations and time-independent neutron diffusion equations. The implicit solution method uses Newton's method to solve the thermal-hydraulic, heat transfer, and neutron diffusion equations during each psuedo-time step with an analytic construction of the Jacobian matrix. The linear system associated with each iteration of Newton's method is solved using a preexisting LU decomposition algorithm in TRACE. The implicit steady state solution was evaluated using two different meshes overlaid on a two-phase pipe model closely matching a boiling water reactor hydraulic channel. The implicit solution method reproduces the correct steady state solution for varying time step sizes for each mesh. An evaluation of the CPU runtime required to complete a steady state calculation using the implicit method shows that the well-developed and optimized explicit solution method currently requires less CPU runtime than the implicit solution method which has yet to be optimized. These results direct future development of the implicit solution method towards optimization strategies to reduce CPU runtime.}
+}

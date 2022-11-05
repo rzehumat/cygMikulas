@@ -42,8 +42,6 @@
 
 \usepackage{cleveref}
 \crefname{enumi}{}{}
-\crefformat{enumi}{#2 #1 #3}
-% \crefformat{enumi}{#2 #1}
 \crefmultiformat{enumi}{#2#1#3}{,#2#1#3}{,#2#1#3}{,#2#1#3}
 
 
@@ -54,7 +52,7 @@
 \fancyhead[L]{\@title}
 \fancyhead[R]{Mikulášské setkání \Year}
 
- \graphicspath{{figures/}}
+ \graphicspath{{img/}}
 
 % commands -- redefinitions
 \renewcommand{\maketitle}{%

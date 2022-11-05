@@ -1,3 +1,4 @@
+# latex auxiliary files
 **/*.aux
 **/*.bbl
 **/*.bcf
@@ -8,10 +9,9 @@
 **/*.out
 **/*.run.xml
 **/*synctex.gz
-template/main.pdf
-article/empty/main.pdf
+*.te~
+
 yearbook/figures/sponzori/*
 yearbook/papers/**
 yearbook/pdf/**
 *.swp
-cygMikulas_article_template.7z

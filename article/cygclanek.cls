@@ -37,8 +37,10 @@
 \usepackage{amsmath}
 \usepackage{mhchem}
 \usepackage{siunitx}
+\sisetup{output-decimal-marker = {,}}
 \usepackage{makecell}
 \usepackage{indentfirst}
+\usepackage{listings}
 
 \usepackage{cleveref}
 \crefname{enumi}{}{}

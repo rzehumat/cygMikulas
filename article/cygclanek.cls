@@ -40,6 +40,13 @@
 \usepackage{makecell}
 \usepackage{indentfirst}
 
+\usepackage{cleveref}
+\crefname{enumi}{}{}
+\crefformat{enumi}{#2 #1 #3}
+% \crefformat{enumi}{#2 #1}
+\crefmultiformat{enumi}{#2#1#3}{,#2#1#3}{,#2#1#3}{,#2#1#3}
+
+
 % options -- styling etc
 \pagestyle{fancy}
 \fancyfoot[C]{}
@@ -180,7 +187,7 @@ $^{\ref{#2}}$%
     \renewcommand{\Institutions}{#1}
 }
 \newcommand{\name}[3][]{
-   #2$^{\ref{#3}}$#1%
+   #2$^{\cref{#3}}$#1%
 }
 
 \renewenvironment{abstract}

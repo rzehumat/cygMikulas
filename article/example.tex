@@ -5,16 +5,15 @@
 \title{Návod k šabloně}
 
 \names{
-    \name[*]{Matěj Rzehulka}{fjfi}, \name{Jára Cimrman}{nerc,abc}, \name{Bilbo Baggins}{fvu,nerc}, \name{Frodo Baggins}{nerc}
+    \name{Jára Cimrman}{nerc,abc}, \name{Bilbo Baggins}{fvu,nerc}, \name{Frodo Baggins}{nerc}
 }
 \institutions{
     \institution{fvu}{Fiktivní výzkumný ústav, Neexistující ulice 5, 999 99 Nikde, ČR}
     \institution{nerc}{Non-existing research centre, 5.25 New street, SM PSTCD, Some Country}
     \institution{abc}{Somewhere}
-    \institution{fjfi}{FJFI ČVUT v Praze, Břehová 7, 115 19 Praha 1, ČR}
 }
 
-\email{rzehumat@fjfi.cvut.cz}
+\email{youremail@yourdomain.sth}
 \year{2022}
 
 \maketitle
@@ -26,6 +25,15 @@
 \section{Úvod}
 
 Tento dokument slouží jako návod. 
+
+\section{Tvorba PDF}
+Nejsnažší je nahrát soubory \verb|main.tex|, \verb|ref.bib| a \verb|cygmikulas.sty| na Overleaf, překlad je 
+jedním kliknutím.
+
+Na Linuxu stačí spustit skript \verb|make.sh| -- ten nejdřív spustí skript \verb|vlna| \cite{vlna} 
+a poté \verb|latexmk|. Pro optimální funkčnost je doporučena instalace \verb|texlive-full|. 
+Bez \verb|latexmk| je možný překlad pomocí \verb|pdflatex| a \verb|biber| (na bibliografii).
+
 
 \section{Teorie}
 Tady demonstrujeme několik možností, jak tuto šablonu používat.
@@ -303,13 +311,37 @@ Nejlepší metoda pro vkládání úryvků kódu je pomocí balíčku \verb|list
 Dobrý návod je na Overleafu \cite{overleaf_code_listing}.
 
 \subsection{Citace}
+Pro citování, tj. odkaz do seznamu bibliografie, se používá příkaz \verb|\cite{key}|, 
+kde \verb|key| je označení položky v seznamu bibliografie -- v základním nastavení šablony 
+jde o soubor \verb|ref.bib|. 
+
+Položky se vkládají ve formátu BibTeX či BibLaTeX. Manuální vyplňování je celkem pracné, proto je 
+dobré používat citačního managera - např. Zbib, Mendeley, RefWorks,\dots 
+Na většině webů s články (ScienceDirect,\dots) existuje tlačítko \uv{Cite}, které přímo vygeneruje citaci 
+ve formátu BibTeX -- tu pak stačí jen zkopírovat.
 
 
 \subsection{Odkazy}
+Relevantní tutoriály na Overleaf \cite{overleaf_referencing,overleaf_hyperlinks}. 
+
+Odkazy v rámci článku se tvoří dvojicí \verb|\ref{key}| - \verb|\label{key}|, kde \verb|label| přiřazuje 
+cíl na konkrétní místo a \verb|ref| na něj odkazuje -- typicky \verb|label| je u obrázků, tabulek, rovnic, 
+případně jednotlivých odstavců nebo kdekoli v textu.  
+
+Hypertextové odkazy se přidávají pomocí \verb|\href{target}{text to display}|.
 
 \subsection{Indexy}
+Standardně se indexy píší v matematickém módu jako např.~\verb|$a^2 + \rho_g$|, což vytvoří $a^2 + \rho_g$. 
+
+Někdy je potřeba vytvořit index bez kurzívy. Pro zjednodušení tohoto bylo převzato existují \verb|\_| 
+a \verb|\^|, např. \verb|$\rho\_v$|, \verb|$g\^k$| vytvoří $\rho\_v$, $g\^k$. 
+
 
 \subsection{Čeština}
+Pro české uvozovky typu \uv{9966} existuje příkaz \verb|\uv|, např. \verb|šrouby \uv{pazdery}| produkuje 
+šrouby \uv{pazdery}.
+
+Pro automatické doplnění pevných mezer existuje skript \uv{vlna} \cite{vlna}.
 
 
 \printbibliography[title={Literatura}]

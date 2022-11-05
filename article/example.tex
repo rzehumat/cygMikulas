@@ -197,38 +197,107 @@ a snaží se dát tabulku tak, aby výsledek vypadal dobře.
 \end{table}
 
 
-\subsection{Obrázky}
-Relevantní tutoriály: \cite{overleaf_thesis3,overleaf_images,overleaf_positioning}. Syntax je podobná jako 
-u tabulek.
-
-Je třeba poskytnout buďto relativní cestu k souboru obrázku nebo, je-li obrázek ve složce \verb|img|, stačí 
-název.
-
-\begin{verbatim}
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.4\textwidth]{fjfi.pdf}
-    \caption{Ukázkový obrázek.}
-    \label{fig:fjfi_logo}
-\end{figure}
-\end{verbatim}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.4\textwidth]{fjfi.pdf}
-    \caption{Ukázkový obrázek.}
-    \label{fig:fjfi_logo}
-\end{figure}
-
-Alternativně (jelikož syntax výše je poměrně zdlouhavá), lze použít zkrácenou verzi.
-\begin{verbatim}
-\obr{fjfi.pdf}{Nejaky obrazek bez nepovinneho \uv{parametru}. Vypada trochu moc
-velky.}{fig:moc-velky-obrazek}[0.4]
-\end{verbatim}
-
-\obr{fjfi.pdf}{Nejaky obrazek bez nepovinneho \uv{parametru}. Vypada trochu moc
-velky.}{fig:moc-velky-obrazek}[0.4]
-
+% \subsection{Obrázky}
+% Relevantní tutoriály: \cite{overleaf_thesis3,overleaf_images,overleaf_positioning}. Syntax je podobná jako 
+% u tabulek.
+% 
+% Je třeba poskytnout buďto relativní cestu k souboru obrázku nebo, je-li obrázek ve složce \verb|img|, stačí 
+% název.
+% 
+% \begin{verbatim}
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.4\textwidth]{fjfi.pdf}
+%     \caption{Ukázkový obrázek.}
+%     \label{fig:fjfi_logo}
+% \end{figure}
+% \end{verbatim}
+% 
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.4\textwidth]{fjfi.pdf}
+%     \caption{Ukázkový obrázek.}
+%     \label{fig:fjfi_logo}
+% \end{figure}
+% 
+% Alternativně (jelikož syntax výše je poměrně zdlouhavá), lze použít zkrácenou verzi.
+% \begin{verbatim}
+% \obr{fjfi.pdf}{Nejaky obrazek bez nepovinneho \uv{parametru}. Vypada trochu moc
+% velky.}{fig:moc-velky-obrazek}[0.4]
+% \end{verbatim}
+% 
+% \obr{fjfi.pdf}{Nejaky obrazek bez nepovinneho \uv{parametru}. Vypada trochu moc
+% velky.}{fig:moc-velky-obrazek}[0.4]
+% 
+% Název \uv{Obrázek} se ne vždy hodí. Název se dá změnit pomocí \verb|\captionsetup{name=...}|, např.
+% 
+% \begin{verbatim}
+% \begin{figure}[h]
+%     \centering
+%     \captionsetup{name=Graf}
+%     \includegraphics[width=0.4\textwidth]{both.png}
+%     \caption{Nějaký graf.}
+%     \label{fig:graf}
+% \end{figure}
+% \end{verbatim}
+% 
+% \begin{figure}[h]
+%     \centering
+%     \captionsetup{name=Graf}
+%     \includegraphics[width=0.4\textwidth]{both.png}
+%     \caption{Nějaký graf.}
+%     \label{fig:graf}
+% \end{figure}
+% 
+% Zkrácená verze pak je \verb|\graf{both.png}{Nejaky graf.}{fig:takygraf}|.
+% \graf{both.png}{Nejaky graf.}{fig:takygraf}
+% 
+% Je-li potřeba dát dva obrázky vedle sebe, lze použít \verb|minipage|.
+% \begin{verbatim}
+%     \begin{figure}[H]
+%         \centering
+%         \begin{minipage}{0.49\textwidth}
+%             \centering
+%             \includegraphics[width=0.98\textwidth]{fjfi.pdf}
+%             \caption{Levý obrázek.}
+%             \label{fig:levy}
+%         \end{minipage}\hfill
+%         \begin{minipage}{0.49\textwidth}
+%             \centering
+%             \includegraphics[width=0.98\textwidth]{symbol_cvut_konturova_verze_cb.pdf}
+%             \caption{Pravý obrázek.}
+%             \label{fig:pravy}
+%         \end{minipage}
+%     \end{figure}
+% \end{verbatim}
+% 
+% \begin{figure}[H]
+%     \centering
+%     \begin{minipage}{0.49\textwidth}
+%         \centering
+%         \includegraphics[width=0.98\textwidth]{fjfi.pdf}
+%         \caption{Levý obrázek.}
+%         \label{fig:levy}
+%     \end{minipage}\hfill
+%     \begin{minipage}{0.49\textwidth}
+%         \centering
+%         \includegraphics[width=0.98\textwidth]{symbol_cvut_konturova_verze_cb.pdf}
+%         \caption{Pravý obrázek.}
+%         \label{fig:pravy}
+%     \end{minipage}
+% \end{figure}
+% 
+% Podobně i zde existují zkrácené verze.
+% \begin{verbatim}
+% \dobr{fjfi.pdf}{Jeden obrazek. Zřejmě by bylo dobré udělat je stejně velké.
+% Proto v~obr.~\ref{fig:srovnany} nastavíme velikost pomocí nepovinneho
+% parametru.}{fig:prvni}{symbol_cvut_konturova_verze_cb.pdf}{Druhý obr.}{fig:druhy}
+% \end{verbatim}
+% 
+% \begin{verbatim}
+% \dgraf{both.png}{Jeden graf.}{fig:dalsi}{calibration.png}{Druhý graf.}{fig:ddalsi}
+% Rozumíte, já po vás nechci žádnou přednášku, jenom ten základní princip a jednu dvě zajímavosti. (Jevištní mistr mlčí.)
+% \end{verbatim}
 
 
 \subsection{Kód}

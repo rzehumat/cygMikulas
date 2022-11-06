@@ -41,6 +41,7 @@
 \usepackage{makecell}
 \usepackage{indentfirst}
 \usepackage{listings}
+\usepackage{subfigure}
 
 \usepackage{cleveref}
 \crefname{enumi}{}{}
@@ -51,17 +52,28 @@
 \pagestyle{fancy}
 \fancyfoot[C]{}
 \fancyhead[C]{}
-\fancyhead[L]{\@title}
+\fancyhead[L]{\TitleShort}
 \fancyhead[R]{Mikulášské setkání \Year}
 
  \graphicspath{{img/}}
 
+\newcommand{\TitleShort}{
+    \@title
+}
+\newcommand{\titleshort}[1]{
+    \renewcommand{\TitleShort}{#1}
+}
+
+
+
 % commands -- redefinitions
 \renewcommand{\maketitle}{%
+    \begin{center}
 	{\noindent\Huge \textbf{\@title}} \\
-
+    \vspace{1em}
     {\noindent\Large \Names } \\
-    \newline
+    \end{center}
+    % \newline
         $~^*$Korespondenční autor: \Email
     \newline
     \begin{compactenum}
@@ -120,7 +132,7 @@ $^{\ref{#2}}$%
 }
 
 \newcommandx{\graf}[4][4=0.8]{%
-\begin{figure}[H]
+\begin{figure}[h]
 \centering
 \captionsetup{name=Graf}
 \includegraphics[width=#4\textwidth]{#1}

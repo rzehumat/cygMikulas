@@ -42,10 +42,14 @@
 \usepackage{indentfirst}
 \usepackage{listings}
 \usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{bm}
 
 \usepackage{cleveref}
 \crefname{enumi}{}{}
 \crefmultiformat{enumi}{#2#1#3}{,#2#1#3}{,#2#1#3}{,#2#1#3}
+
+
 
 
 % options -- styling etc
@@ -213,3 +217,9 @@ $^{\ref{#2}}$%
 \renewcommand\_[2][1]{\ifmmode _{\textnormal{\scalebox{#1}{#2}}}\else\underscore#2\fi} %roman subscript
 \renewcommand\^[2][1]{\ifmmode ^{\textnormal{\scalebox{#1}{#2}}}\else\xor#2\fi} %roman superscript
 \def\smallind{0.8}
+
+\newcommand{\cit}[1]{
+    \begin{compactitem}
+        #1
+    \end{compactitem}
+}

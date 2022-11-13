@@ -41,9 +41,10 @@
 \usepackage{makecell}
 \usepackage{indentfirst}
 \usepackage{listings}
-\usepackage{subfigure}
 \usepackage{multirow}
 \usepackage{bm}
+\usepackage{subfigure}
+\usepackage{upgreek}
 
 \usepackage{cleveref}
 \crefname{enumi}{}{}

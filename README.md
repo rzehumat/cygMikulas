@@ -1,5 +1,6 @@
-# cygMikulas
+# Templates for 'Mikulášské setkání'-conference
 
-A template in Czech. See `article` directory for article template.
+## Article
+**Just edit the `main.tex` file.**
 
-If you're doing the proceedings, see `yearbook`.
+All manual is in `example.pdf` (source code in `example.tex`).
